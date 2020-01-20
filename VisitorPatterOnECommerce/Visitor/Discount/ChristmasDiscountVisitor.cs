@@ -2,7 +2,7 @@
 
 namespace VisitorPatterOnECommerce.Visitor
 {
-    public class ChristmasDiscountVisitor : IVisitor
+    public class ChristmasDiscountVisitor : IProductVisitor
     {
         public string Description => "Christmas Discount";
 

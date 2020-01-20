@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using VisitorPatterOnECommerce.Domain;
 using VisitorPatterOnECommerce.Visitor;
+using VisitorPatterOnECommerce.Visitor.Benefits;
 
 namespace VisitorPatterOnECommerce
 {
@@ -16,11 +17,15 @@ namespace VisitorPatterOnECommerce
                 new Product("Shirt","Lacoste",789.90)
             };
 
-            var discount = new ChristmasDiscountVisitor();
-
+            var discount = new BlackFridayDiscountVisitor();
             products.ForEach(product => product.Accept(discount));
 
-            Console.WriteLine($"Discount applied -> {discount.Description}\n");
+            var vatIncludedBenefit = new VATIncludedBenefitVisitor();
+            products.ForEach(product => product.Accept(vatIncludedBenefit));
+
+            var guccyFreeShipping = new GuccyFreeShippingBenefitVisitor();
+            products.ForEach(product => product.Accept(guccyFreeShipping));
+
             products.ForEach(product => Console.WriteLine(product));
         }
     }

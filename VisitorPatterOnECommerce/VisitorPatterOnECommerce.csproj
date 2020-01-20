@@ -9,6 +9,7 @@
     <Folder Include="Domain\" />
     <Folder Include="Visitor\" />
     <Folder Include="Visitor\Discount\" />
+    <Folder Include="Visitor\Benefits\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Visitor\Discount.cs" />

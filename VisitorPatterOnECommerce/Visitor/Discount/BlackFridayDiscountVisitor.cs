@@ -2,7 +2,7 @@
 
 namespace VisitorPatterOnECommerce.Visitor
 {
-    public class BlackFridayDiscountVisitor : IVisitor
+    public class BlackFridayDiscountVisitor : IProductVisitor
     {
         public string Description => "Black Friday Discount";
 

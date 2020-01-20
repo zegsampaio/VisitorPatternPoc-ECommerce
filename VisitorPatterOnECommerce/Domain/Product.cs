@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using VisitorPatterOnECommerce.Visitor;
 
@@ -13,6 +15,7 @@ namespace VisitorPatterOnECommerce.Domain
             Brand = brand;
             Price = price;
             PriceWithDiscount = price;
+            Benefits = new List<string>();
         }
 
         public Guid Id { get; }
@@ -21,8 +24,9 @@ namespace VisitorPatterOnECommerce.Domain
         public string Brand { get; }
         public double Price { get; }
         public double PriceWithDiscount { get; internal set; }
+        public IList<string> Benefits { get; internal set; }
 
-        public void Accept(IVisitor visitor)
+        public void Accept(IProductVisitor visitor)
         {
             visitor.Visit(this);
         }
@@ -34,6 +38,7 @@ namespace VisitorPatterOnECommerce.Domain
                 .AppendLine($"Description {Description}")
                 .AppendLine($"Price {Price}")
                 .AppendLine($"PriceWithDiscount {PriceWithDiscount}")
+                .AppendLine($"Benefits: {string.Join("; ", Benefits.ToArray())}")
                 .ToString();
         }
     }

@@ -2,7 +2,7 @@
 
 namespace VisitorPatterOnECommerce.Visitor
 {
-    public interface IVisitor
+    public interface IProductVisitor
     {
         public string Description { get; }
 
