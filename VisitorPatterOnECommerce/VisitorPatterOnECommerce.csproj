@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Domain\" />
+    <Folder Include="Visitor\" />
+    <Folder Include="Visitor\Discount\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Visitor\Discount.cs" />
+    <Compile Remove="Domain\Shoes.cs" />
+  </ItemGroup>
+</Project>
