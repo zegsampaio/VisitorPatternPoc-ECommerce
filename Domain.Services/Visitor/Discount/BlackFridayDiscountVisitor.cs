@@ -1,4 +1,4 @@
-﻿using VisitorPatterOnECommerce.Domain;
+﻿using VisitorPatterOnECommerce.Domain.Core;
 using VisitorPatterOnECommerce.Domain.Model;
 
 namespace VisitorPatterOnECommerce.Visitor.Domain.Services.Discount

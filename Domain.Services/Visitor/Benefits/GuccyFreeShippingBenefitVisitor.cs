@@ -1,4 +1,5 @@
 ﻿using VisitorPatterOnECommerce.Domain.Model;
+using VisitorPatterOnECommerce.Domain.Core;
 
 namespace VisitorPatterOnECommerce.Domain.Services.Visitor.Benefits
 {

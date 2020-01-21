@@ -1,4 +1,4 @@
-﻿namespace VisitorPatterOnECommerce.Domain.Model
+﻿namespace VisitorPatterOnECommerce.Domain.Core
 {
     public interface IVisitor<T>
     {
