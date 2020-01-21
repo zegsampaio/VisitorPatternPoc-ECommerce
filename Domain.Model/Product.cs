@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using VisitorPatterOnECommerce.Visitor;
 
-namespace VisitorPatterOnECommerce.Domain
+namespace VisitorPatterOnECommerce.Domain.Model
 {
     public class Product
     {
@@ -23,10 +22,17 @@ namespace VisitorPatterOnECommerce.Domain
         public string Description { get; }
         public string Brand { get; }
         public double Price { get; }
-        public double PriceWithDiscount { get; internal set; }
-        public IList<string> Benefits { get; internal set; }
+        public double PriceWithDiscount { get; private set; }
+        public IList<string> Benefits { get; private set; }
 
-        public void Accept(IProductVisitor visitor)
+        public void AddPriceWithDiscount(double priceWithDiscount)
+        {
+            if (priceWithDiscount <= 0) throw new ArgumentOutOfRangeException(nameof(priceWithDiscount), "must be greater than 0");
+            if (priceWithDiscount > Price) throw new ArgumentOutOfRangeException(nameof(priceWithDiscount), "must be less than product Price");
+            PriceWithDiscount = priceWithDiscount;
+        }
+
+        public void Accept(IVisitor<Product> visitor)
         {
             visitor.Visit(this);
         }

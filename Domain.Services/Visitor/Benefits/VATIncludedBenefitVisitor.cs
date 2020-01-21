@@ -1,8 +1,9 @@
 ﻿using VisitorPatterOnECommerce.Domain;
+using VisitorPatterOnECommerce.Domain.Model;
 
-namespace VisitorPatterOnECommerce.Visitor.Benefits
+namespace VisitorPatterOnECommerce.Domain.Services.Visitor.Benefits
 {
-    public class VATIncludedBenefitVisitor : IProductVisitor
+    public class VATIncludedBenefitVisitor : IVisitor<Product>
     {
         public string Description => "VAT Included";
 

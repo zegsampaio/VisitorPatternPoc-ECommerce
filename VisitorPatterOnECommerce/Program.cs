@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using VisitorPatterOnECommerce.Domain;
-using VisitorPatterOnECommerce.Visitor;
-using VisitorPatterOnECommerce.Visitor.Benefits;
+using VisitorPatterOnECommerce.Domain.Model;
+using VisitorPatterOnECommerce.Domain.Services.Visitor.Benefits;
+using VisitorPatterOnECommerce.Visitor.Domain.Services.Discount;
 
 namespace VisitorPatterOnECommerce
 {

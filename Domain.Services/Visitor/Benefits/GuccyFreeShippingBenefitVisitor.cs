@@ -1,8 +1,8 @@
-﻿using VisitorPatterOnECommerce.Domain;
+﻿using VisitorPatterOnECommerce.Domain.Model;
 
-namespace VisitorPatterOnECommerce.Visitor.Benefits
+namespace VisitorPatterOnECommerce.Domain.Services.Visitor.Benefits
 {
-    public class GuccyFreeShippingBenefitVisitor : IProductVisitor
+    public class GuccyFreeShippingBenefitVisitor : IVisitor<Product>
     {
         public string Description => "Free Shipping";
 

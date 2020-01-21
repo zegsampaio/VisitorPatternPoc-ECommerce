@@ -1,8 +1,9 @@
 ﻿using VisitorPatterOnECommerce.Domain;
+using VisitorPatterOnECommerce.Domain.Model;
 
-namespace VisitorPatterOnECommerce.Visitor.Benefits
+namespace VisitorPatterOnECommerce.Domain.Services.Visitor.Benefits
 {
-    public class ResetBenefitsVisitor : IProductVisitor
+    public class ResetBenefitsVisitor : IVisitor<Product>
     {
         public string Description => "Reset";
 
