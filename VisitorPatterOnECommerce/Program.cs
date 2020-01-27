@@ -12,7 +12,7 @@ namespace VisitorPatterOnECommerce
         {
             var products = new List<Product>
             {
-                new Product("Shoes","Guccy",999.00),
+                new Product("Shoes","Gucci",999.00),
                 new Product("Jeans","Prada",200.00),
                 new Product("Shirt","Lacoste",789.90)
             };
@@ -23,8 +23,8 @@ namespace VisitorPatterOnECommerce
             var vatIncludedBenefit = new VATIncludedBenefitVisitor();
             products.ForEach(product => product.Accept(vatIncludedBenefit));
 
-            var guccyFreeShipping = new GuccyFreeShippingBenefitVisitor();
-            products.ForEach(product => product.Accept(guccyFreeShipping));
+            var gucciFreeShipping = new GucciFreeShippingBenefitVisitor();
+            products.ForEach(product => product.Accept(gucciFreeShipping));
 
             products.ForEach(product => Console.WriteLine(product));
         }
